@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Focus Hub",
+    "version": "1.0",
+    "description": "Transform your Chrome homepage into a customizable productivity hub. Easily access your favorite links, manage to-do lists, and enjoy inspiring quotes—all in one sleek interface. Stay organized and focused with Focus Hub today!",
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab"
+    ],
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ]
+  }
