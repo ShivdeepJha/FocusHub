@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 320px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 0.8rem;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            font-size: 0.75rem;
+        }
+
+        footer span {
+            color: #ff5252;
+        }
+
+        /* Light Theme */
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color:#4ea4db;
+        }
+
+        .title img {
+            width: 40px;
+        }
+
+        .yellow-text {
+            color: #ffcd35
+        }
+
+        /* Dark Theme */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f9f9f9;
+            }
+
+            footer {
+                color: #888;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <span><img src="icons/icon48.png" alt=""></span>
+            <h1>Focus <span class="yellow-text">Hub</span></h1>
+        </div>
+        <p>Manage your productivity and stay inspired!</p>
+        <p class="description">
+            Transform your Chrome homepage into a customizable productivity hub. Easily access your favorite links,
+            manage to-do lists, and enjoy inspiring quotes—all in one sleek interface. Stay organized and focused with
+            FocusHub today!
+        </p>
+    </div>
+    <footer>
+        Made with <span>♥</span> by Shivdeep Jha
+    </footer>
+</body>
+
+</html>
