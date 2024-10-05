@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  height: 100vh;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .logo {
@@ -10,6 +11,11 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+}
+.react{
+    width: 365px;
+    height: 365px;
+    display: inline-block;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -28,15 +34,213 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .react {
     animation: logo-spin infinite 20s linear;
   }
 }
+.glass-card {
+background: rgba(255, 255, 255, 0.19);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
+}
+.clock-container {
+    height: 140px;
+    width: 320px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    top: 30px;
+    left: 30px;
+    align-items: center;
+    overflow: hidden;
+}
+.clock-time {
+    font-size: 55px;
+    /* color: #e9b41b; */
+    font-weight: 600;
+}
+.clock-date {
+    font-size: 40px;
+    margin-bottom: 8px;
+    /* color: #e9b41b; */
+
+}
+.clock-day{
+    position: relative;
+    width: 72px;
+    line-height: 1.5;
+}
+.clock-day span{
+    background-color: #e9b41b;
+    position: absolute;
+    font-size: 40px;
+    width: 140px;
+    line-height: 1.6;
+    top: -32px;
+    left: -47px;
+    transform: rotateZ(270deg);
+}
+.task-container {
+    margin-top: 20px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    font-size: 24px;
+    color: #e9b41b;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 150px;
+    left: 41px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 276px;
+    border-top: none;
+}
+.task-container h2{
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.task-container ul {
+    list-style-type: disc; /* Changes bullet style */
+    text-align: left;
+    font-size: 20px;
+    padding-left: 20px; /* Indentation for bullet points */
+    margin-top: 10px; /* Spacing above the list */
+    color: #f0e68c; /* Light color for the description */
+}
+
+
+p {
+    margin: 0;
+    line-height: 1;
+}
+
 
 .card {
   padding: 2em;
 }
 
+
 .read-the-docs {
   color: #888;
+}
+.react-icon-container{
+    position: absolute;
+    top: 25px;
+    right: 110px;
+    z-index: 3;
+}
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to {
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to {
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+
+  @-moz-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to {
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to {
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+  }
+
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+
+  }
+
+  .clouds{
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 4;
+
+     -moz-animation:move-background 150s linear infinite;
+    -ms-animation:move-background 150s linear infinite;
+    -o-animation:move-background 150s linear infinite;
+    -webkit-animation:move-background 150s linear infinite;
+    animation:move-background 150s linear infinite;
+  }
+  .moon{
+    height: 40vh;
+    width:40vh;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    right: 130px;
+  }
+.all-widgets{
+    width: 100vw;
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
